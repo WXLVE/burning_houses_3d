@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://WXLVE.github.io/burning-houses-3d",
+  "homepage": "https://WXLVE.github.io/burning_houses_3d",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
