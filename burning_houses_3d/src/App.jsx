@@ -122,13 +122,13 @@ function House({ position, fireLevel, index, total }) {
 
 // 🏘️ Village (FIXED: stable positions)
 function Village({ fireLevel }) {
-  const total = 100;
+  const total = 300;
 
   const positions = useMemo(() => {
     return Array.from({ length: total }, (_, i) => [
-      (seededRandom(i) - 0.5) * 20,
+      (seededRandom(i) - 0.5) * 40,
       0,
-      (seededRandom(i * 2) - 0.5) * 20,
+      (seededRandom(i * 2) - 0.5) * 40,
     ]);
   }, []);
 
@@ -207,10 +207,16 @@ export default function App() {
   return (
     
     <>
+      <div>
+        <h1><strong>Anger Visualizer: </strong> See your Anger come to life </h1>
+        <p> Use the slider to set your Anger level and watch as the houses burn more intensely. </p>
+        <p> This interactive visualization helps you understand and manage your emotions in a fun and engaging way.</p>
+        <hr/>
+      </div>
       <Leva />
       <Canvas
-      style={{ width: "100vw", height: "100vh" }}
-      camera={{ position: [10, 10, 10], fov: 60 }}>
+          style={{ width: "100vw", height: "100vh" }}
+          camera={{ position: [15, 15, 20], fov: 60 }}>
         <Scene />
       </Canvas>
     </>
